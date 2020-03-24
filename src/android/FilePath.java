@@ -95,7 +95,8 @@ public class FilePath extends CordovaPlugin {
     public void resolveNativePath() throws JSONException {
         JSONObject resultObj = new JSONObject();
         /* content:///... */
-        Uri pvUrl = Uri.parse(this.uriStr);
+         Uri pvUrl = Uri.parse(Uri.decode(this.uriStr));
+
 
         Log.d(TAG, "URI: " + this.uriStr);
 
